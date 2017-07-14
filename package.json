@@ -19,8 +19,9 @@
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ./src/**/*.ts -t verbose",
-    "ngc": "node_modules/.bin/ngc -p tsconfig-aot.json",
-    "rup": "node_modules/.bin/rollup -c rollup-config.js"
+    "ngc-aot": "node_modules/.bin/ngc -p tsconfig-aot.json",
+    "rup": "node_modules/.bin/rollup -c rollup-config.js",
+    "copy-dist-files": "node ./copy-dist-files.js"
   },
   "keywords": [],
   "author": "",

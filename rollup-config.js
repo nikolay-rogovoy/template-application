@@ -5,7 +5,7 @@ import uglify      from 'rollup-plugin-uglify';
 export default {
   entry: 'src/main.js',
   dest: 'src/build.js', // output a single application bundle
-  sourceMap: false,
+  sourceMap: true,
   format: 'iife',
   onwarn: function(warning) {
     // Skip certain warnings
@@ -19,8 +19,12 @@ export default {
   plugins: [
     nodeResolve({jsnext: true, module: true}),
     commonjs({
-      include: 'node_modules/rxjs/**',
+      include: [
+        //'node_modules/core-js/**',
+        //'node_modules/zone.js/**',
+        'node_modules/rxjs/**'
+      ]
     }),
-    uglify()
+    //uglify()
   ]
 };
