@@ -1,0 +1,30 @@
+#minimizeSidebar{
+	background:#447DF7;
+	border:#447DF7;
+}
+
+.paging_full_numbers span.paginate_button {
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-weight:normal;
+}
+
+.paging_full_numbers span.paginate_button:hover {
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-weight:normal;
+}
+
+.paging_full_numbers span.paginate_active {
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-weight:normal;
+}
+
+.ng-valid[required], .ng-valid.required  {
+	border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+	border-left: 5px solid #a94442; /* red */
+}

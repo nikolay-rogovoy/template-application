@@ -5,18 +5,17 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { TestComponent }  from './test/test-component';
+import { NavbarModule } from './navbar/navbar.module';
+import { SidebarModule } from './sidebar/sidebar.module';
 
 @NgModule({
   imports:
     [
       BrowserModule,
       FormsModule,
-      RouterModule.forRoot(
-        [
-          { path: '', redirectTo: 'test', pathMatch: 'full' },
-          { path: 'test', component: TestComponent }
-        ]
-      )
+      NavbarModule,
+      SidebarModule,
+      RouterModule.forRoot([])
     ],
   declarations:
     [

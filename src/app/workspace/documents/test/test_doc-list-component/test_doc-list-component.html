@@ -1,0 +1,73 @@
+
+<div class="container-fluid" [ngClass]="{hidden: activeForm != 1}">
+    <div class="row">
+        <div class="card">
+            <div class="content">
+                <div class="toolbar">
+                    <button type="button" class="btn btn-fill btn-primary" (click)="createNew()">
+                        <span class="btn-label">
+                            <i class="fa fa-plus"></i>
+                        </span>
+                        Создать
+                    </button>
+                    <button type="button" class="btn btn-fill btn-primary"
+                            [ngClass]="{ hidden: childMode != 1 }"
+                            (click)="genCancel()">Отменить
+                    </button>
+
+                    <div><br></div>
+                </div>
+                <div class="fresh-datatables">
+                    <table [id]="tableName" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                        <thead>
+                        <tr>
+                            <th>Наименование</th>
+                            <th>Комментарий</th>
+                            <th>Дата документа</th>
+                            <th>Дата созд2</th>
+                            <th>Дата2</th>
+                            <th>Справочник</th>
+                            <th>Справочник2</th>
+                            <th>Номер</th>
+                            <th>Цена</th>
+                            <th>нум 2 нот нулл</th>
+                            <th>Цена 2 нот нулл</th>
+                            <th>Об. тел.</th>
+                            <th>Тел.</th>
+                            <th>email req</th>
+                            <th>email</th>
+
+                            <th class="disabled-sorting text-right">Действия</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let position of positionsTyped" [id]="getRowId(position)" style="cursor: pointer;" (click)="selectRow(position)">
+                            <td>{{position.name}}</td>
+                              <td>{{position.comment}}</td>
+                                              <td>{{position.dtdoc | date:"dd.MM.yyyy"}}</td>
+                              <td>{{position.dccre2 | date:"dd.MM.yyyy HH:mm"}}</td>
+                                              <td>{{position.dtdoc2 | date:"dd.MM.yyyy"}}</td>
+                              <td>{{position.test_dictionary_name}}</td>
+                              <td>{{position.test_dictionary2_name}}</td>
+                              <td>{{position.numpos}}</td>
+                              <td>{{position.price}}</td>
+                              <td>{{position.numpos2}}</td>
+                              <td>{{position.price2}}</td>
+                              <td>{{position.phone2}}</td>
+                              <td>{{position.phone}}</td>
+                              <td>{{position.email2}}</td>
+                              <td>{{position.email}}</td>
+  
+                            <td class="text-right">
+                                <a (click)="delete(position);$event.stopPropagation();" class="btn btn-simple btn-danger btn-icon remove fa fa-times"></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- end content-->
+        </div><!--  end card  -->
+    </div> <!-- end row -->
+</div>
+
+

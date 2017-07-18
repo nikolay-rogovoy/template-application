@@ -1,0 +1,367 @@
+    <div class="main-content">
+    <div class="container-fluid">
+        <!--
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="header">
+                        <h4 class="title">Global Sales by Top Locations</h4>
+                        <p class="category">All products that were shipped</p>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="../../../assets/img/flags/US.png" />
+                                                    </div>
+                                                </td>
+                                                <td>USA</td>
+                                                <td class="text-right">
+                                                    2.920
+                                                </td>
+                                                <td class="text-right">
+                                                    53.23%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="../../../assets/img/flags/DE.png" />
+                                                    </div>
+                                                </td>
+                                                <td>Germany</td>
+                                                <td class="text-right">
+                                                    1.300
+                                                </td>
+                                                <td class="text-right">
+                                                    20.43%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="../../../assets/img/flags/AU.png" />
+                                                    </div>
+                                                </td>
+                                                <td>Australia</td>
+                                                <td class="text-right">
+                                                    760
+                                                </td>
+                                                <td class="text-right">
+                                                    10.35%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="../../../assets/img/flags/GB.png" />
+                                                    </div>
+                                                </td>
+                                                <td>United Kingdom</td>
+                                                <td class="text-right">
+                                                    690
+                                                </td>
+                                                <td class="text-right">
+                                                    7.87%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="../../../assets/img/flags/RO.png" />
+                                                    </div>
+                                                </td>
+                                                <td>Romania</td>
+                                                <td class="text-right">
+                                                    600
+                                                </td>
+                                                <td class="text-right">
+                                                    5.94%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag">
+                                                        <img src="../../../assets/img/flags/BR.png" />
+                                                    </div>
+                                                </td>
+                                                <td>Brasil</td>
+                                                <td class="text-right">
+                                                    550
+                                                </td>
+                                                <td class="text-right">
+                                                    4.34%
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1">
+                                <div id="worldMap" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        -->
+
+        <!--
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="header">
+                        <h4 class="title">Мои задачи</h4>
+                        <p class="category">перечень задач к работе из списков и календарей</p>
+                    </div>
+                    <div class="content">
+                        <div class="table-full-width">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox21" type="checkbox" unchecked>
+                                            <label for="checkbox21">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Какая-то задача из списка "мои задачи"</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Открыть задачу для редактирования" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Закрыть задачу" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox22" type="checkbox" checked="">
+                                            <label for="checkbox22">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>... задача, порученная кем-то из коллег</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox23" type="checkbox" checked="">
+                                            <label for="checkbox23">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Задача от руководства...
+                                    </td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox24" type="checkbox" unchecked>
+                                            <label for="checkbox24">
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Перезвонить клиенту №222 по заказу №222</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox20" type="checkbox" unchecked>
+                                            <label for="checkbox20">
+                                            </label>
+                                        </div>
+
+                                    </td>
+                                    <td>Еще какая-то задача...</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox20" type="checkbox" unchecked>
+                                            <label for="checkbox20">
+                                            </label>
+                                        </div>
+
+                                    </td>
+                                    <td>Еще какая-то задача...</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox20" type="checkbox" unchecked>
+                                            <label for="checkbox20">
+                                            </label>
+                                        </div>
+
+                                    </td>
+                                    <td>Еще какая-то задача...</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input id="checkbox20" type="checkbox" unchecked>
+                                            <label for="checkbox20">
+                                            </label>
+                                        </div>
+
+                                    </td>
+                                    <td>Еще какая-то задача...</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-history"></i> Список задач был обновлен 00:00 01.01.2017
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Статистика по продажам</h4>
+                        <p class="category">Мои заказы по типам продукции или поставщикам</p>
+                    </div>
+                    <div class="content">
+                        <div id="chartEmail" class="ct-chart "></div>
+                    </div>
+                    <div class="footer">
+                        <div class="legend">
+                            <i class="fa fa-circle text-info"></i> Rehau
+                            <i class="fa fa-circle text-danger"></i> VEKA
+                            <i class="fa fa-circle text-warning"></i> KBE
+                        </div>
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-clock-o"></i> за период с 01.01.2017 по 10.01.2017
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Активность клиентов</h4>
+                        <p class="category">анализ активности клиентов за последнюю неделю</p>
+                    </div>
+                    <div class="content">
+                        <div id="chartHours" class="ct-chart"></div>
+                    </div>
+                    <div class="footer">
+                        <div class="legend">
+                            <i class="fa fa-circle text-info"></i> Первое посещение
+                            <i class="fa fa-circle text-danger"></i> Покупка
+                            <i class="fa fa-circle text-warning"></i> Вторичный клиент
+                        </div>
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-history"></i> Статистика была обновлена 00:00 01.01.2017
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="header">
+                        <h4 class="title">Продажи энергоэффективных стеклопакетов</h4>
+                        <p class="category">анализ по всем заказам за последний месяц</p>
+                    </div>
+                    <div class="content">
+                        <div id="chartActivity" class="ct-chart"></div>
+                    </div>
+                    <div class="footer">
+                        <div class="legend">
+                            <i class="fa fa-circle text-info"></i> Обычные стеклопакеты
+                            <i class="fa fa-circle text-danger"></i> Энергоэффективные
+                        </div>
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-check"></i> Статистика обновлена 00:00 01.01.2017
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+
+
+    </div>
+</div>

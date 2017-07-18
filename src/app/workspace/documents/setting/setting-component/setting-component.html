@@ -1,0 +1,182 @@
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="card">
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <br>
+
+                        <legend>Настройки администратора</legend>
+                        <div class="header">
+                            <h5 class="title">Какая-то группа</h5>
+                            <p class="category">Описание настроек группы</p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd">Резерв</button>
+                            <button class="btn btn-round btn-wd">Резерв</button>
+                        </div>
+
+                        <br>
+                        <legend>Системные настройки</legend>
+
+                        <div class="header">
+                            <h5 class="title">Заказы</h5>
+                            <p class="category">Описание настроек группы</p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/orderdocgroup');">Группы заказов</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/orderdoctype');">Типы заказов</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/orderdocsign');">Признаки</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Контакты</h5>
+                            <p class="category">Описание настроек группы</p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/customergroup');">Группы контактов</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/customertype');">Типы контактов</button>
+                        </div>
+
+
+                        <div class="header">
+                            <h5 class="title">Договора</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/agreementgroup');">Группы договоров</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/agreementtype');">Типы договоров</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Обращения</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/appealgroup');">Группы обращений</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/appealtype');">Типы обращений</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/appealsource');">Източники обращений</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Монтажи</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/assemblygroup');">Группы монтажей</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/assemblytype');">Типы монтажей</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Кампании</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/campaigngroup');">Группы кампаний</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/campaigntype');">Типы кампаний</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Доставки</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/deliverygroup');">Группы доставок</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/deliverytype');">Типы доставок</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Справочники</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/destanationgroup');">Группы направлений</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/goodgroup');">Группы материалов</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/goodkitgroup');">Группы комплектов</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/reportgroup');">Группы отчетов</button>
+                            <br>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/settinggroup');">Группы переменных</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/targetgroup');">Группы целей</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/mailinggroup');">Группы рассылок</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">События</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/eventgroup');">Группы событий</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/eventtype');">Типы событий</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Уроки</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/lessonsgroup');">Группы уроков</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/lessonstype');">Типы уроков</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Новости</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/newsgroup');">Группы новостей</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/newstype');">Типы новостей</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Платежи</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/paymentgroup');">Группы платежей</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/paymenttype');">Типы платежей</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Сервис</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/servicegroup');">Группы сервиса</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/servicetype');">Типы сервиса</button>
+                        </div>
+
+                        <div class="header">
+                            <h5 class="title">Замеры</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/sizedocgroup');">Группы замеров</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/sizedoctype');">Типы замеров</button>
+                        </div>
+                        <div class="header">
+                            <h5 class="title">Разговорные скрипты</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/talkscriptgroup');">Группы разговорных скриптов</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/talkscripttype');">Типы разговорных скриптов</button>
+                        </div>
+                        <div class="header">
+                            <h5 class="title">Задачи</h5>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/taskgroup');">Группы задач</button>
+                            <button class="btn btn-round btn-wd" (click)="router.navigateByUrl('documents/tasktype');">Группы задач</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

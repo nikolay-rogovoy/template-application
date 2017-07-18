@@ -1,2 +1,16 @@
-<h1>Hello {{name}}</h1>
-<router-outlet></router-outlet>
+
+<div class="wrapper">
+  <div class="sidebar" data-color="blue" data-image="">
+    <sidebar-cmp></sidebar-cmp>
+    <div class="sidebar-background" style="background-image: url(assets/img/full-screen-image-3.jpg)"></div>
+  </div>
+  <div class="main-panel">
+    <navbar-cmp></navbar-cmp>
+    <!--
+    <dashboard-cmp></dashboard-cmp>
+    <div *ngIf="!isMap()">
+        <footer-cmp></footer-cmp>
+    </div>
+    -->
+  </div>
+</div>
