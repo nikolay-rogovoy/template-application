@@ -7,22 +7,44 @@
 import * as i0 from '@angular/core';
 import * as i1 from '../../../src/app/app.module';
 import * as i2 from '../../../src/app/app.component';
-import * as i3 from './app.component.ngfactory';
-import * as i4 from '@angular/common';
-import * as i5 from '@angular/platform-browser';
+import * as i3 from './test/test-component.ngfactory';
+import * as i4 from './app.component.ngfactory';
+import * as i5 from '@angular/common';
+import * as i6 from '@angular/platform-browser';
+import * as i7 from '@angular/forms';
+import * as i8 from '@angular/router';
+import * as i9 from '../../../src/app/at-grid/at-grid-module';
+import * as i10 from '../../../src/app/test/test-component';
 export var AppModuleNgFactory = i0.ɵcmf(i1.AppModule, [i2.AppComponent], function (_l) {
-    return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]),
-        i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵm, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i4.NgLocalization, i4.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(4608, i0.Compiler, i0.Compiler, []), i0.ɵmpd(5120, i0.APP_ID, i0.ɵf, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵk, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵl, []), i0.ɵmpd(4608, i5.DomSanitizer, i5.ɵe, [i4.DOCUMENT]),
-        i0.ɵmpd(6144, i0.Sanitizer, null, [i5.DomSanitizer]), i0.ɵmpd(4608, i5.HAMMER_GESTURE_CONFIG, i5.HammerGestureConfig, []), i0.ɵmpd(5120, i5.EVENT_MANAGER_PLUGINS, function (p0_0, p1_0, p2_0, p2_1) {
-            return [new i5.ɵDomEventsPlugin(p0_0), new i5.ɵKeyEventsPlugin(p1_0),
-                new i5.ɵHammerGesturesPlugin(p2_0, p2_1)];
-        }, [i4.DOCUMENT, i4.DOCUMENT, i4.DOCUMENT, i5.HAMMER_GESTURE_CONFIG]), i0.ɵmpd(4608, i5.EventManager, i5.EventManager, [i5.EVENT_MANAGER_PLUGINS, i0.NgZone]),
-        i0.ɵmpd(135680, i5.ɵDomSharedStylesHost, i5.ɵDomSharedStylesHost, [i4.DOCUMENT]),
-        i0.ɵmpd(4608, i5.ɵDomRendererFactory2, i5.ɵDomRendererFactory2, [i5.EventManager,
-            i5.ɵDomSharedStylesHost]), i0.ɵmpd(6144, i0.RendererFactory2, null, [i5.ɵDomRendererFactory2]), i0.ɵmpd(6144, i5.ɵSharedStylesHost, null, [i5.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i0.Testability, i0.Testability, [i0.NgZone]), i0.ɵmpd(4608, i5.Meta, i5.Meta, [i4.DOCUMENT]), i0.ɵmpd(4608, i5.Title, i5.Title, [i4.DOCUMENT]), i0.ɵmpd(512, i4.CommonModule, i4.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i5.ɵa, []), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p0_1) {
-            return [i5.ɵc(p0_0, p0_1)];
-        }, [[2, i5.NgProbeToken], [2, i0.NgProbeToken]]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ɵe, i0.ɵe, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver,
+    return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.TestComponentNgFactory, i4.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver],
+            i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵm, [[3, i0.LOCALE_ID]]),
+        i0.ɵmpd(4608, i5.NgLocalization, i5.NgLocaleLocalization, [i0.LOCALE_ID]), i0.ɵmpd(5120, i0.APP_ID, i0.ɵf, []), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵk, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵl, []),
+        i0.ɵmpd(4608, i6.DomSanitizer, i6.ɵe, [i5.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i6.DomSanitizer]), i0.ɵmpd(4608, i6.HAMMER_GESTURE_CONFIG, i6.HammerGestureConfig, []), i0.ɵmpd(5120, i6.EVENT_MANAGER_PLUGINS, function (p0_0, p1_0, p2_0, p2_1) {
+            return [new i6.ɵDomEventsPlugin(p0_0), new i6.ɵKeyEventsPlugin(p1_0),
+                new i6.ɵHammerGesturesPlugin(p2_0, p2_1)];
+        }, [i5.DOCUMENT, i5.DOCUMENT, i5.DOCUMENT, i6.HAMMER_GESTURE_CONFIG]), i0.ɵmpd(4608, i6.EventManager, i6.EventManager, [i6.EVENT_MANAGER_PLUGINS, i0.NgZone]),
+        i0.ɵmpd(135680, i6.ɵDomSharedStylesHost, i6.ɵDomSharedStylesHost, [i5.DOCUMENT]),
+        i0.ɵmpd(4608, i6.ɵDomRendererFactory2, i6.ɵDomRendererFactory2, [i6.EventManager,
+            i6.ɵDomSharedStylesHost]), i0.ɵmpd(6144, i0.RendererFactory2, null, [i6.ɵDomRendererFactory2]), i0.ɵmpd(6144, i6.ɵSharedStylesHost, null, [i6.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i0.Testability, i0.Testability, [i0.NgZone]), i0.ɵmpd(4608, i6.Meta, i6.Meta, [i5.DOCUMENT]), i0.ɵmpd(4608, i6.Title, i6.Title, [i5.DOCUMENT]), i0.ɵmpd(4608, i7.ɵi, i7.ɵi, []),
+        i0.ɵmpd(5120, i8.ActivatedRoute, i8.ɵf, [i8.Router]), i0.ɵmpd(4608, i8.NoPreloading, i8.NoPreloading, []), i0.ɵmpd(6144, i8.PreloadingStrategy, null, [i8.NoPreloading]), i0.ɵmpd(135680, i8.RouterPreloader, i8.RouterPreloader, [i8.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i8.PreloadingStrategy]),
+        i0.ɵmpd(4608, i8.PreloadAllModules, i8.PreloadAllModules, []), i0.ɵmpd(5120, i8.ROUTER_INITIALIZER, i8.ɵi, [i8.ɵg]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) {
+            return [p0_0];
+        }, [i8.ROUTER_INITIALIZER]), i0.ɵmpd(512, i5.CommonModule, i5.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i6.ɵa, []), i0.ɵmpd(1024, i0.NgProbeToken, function () {
+            return [i8.ɵb()];
+        }, []), i0.ɵmpd(512, i8.ɵg, i8.ɵg, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p0_1, p1_0) {
+            return [i6.ɵc(p0_0, p0_1), i8.ɵh(p1_0)];
+        }, [[2, i6.NgProbeToken], [2, i0.NgProbeToken], i8.ɵg]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ɵe, i0.ɵe, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver,
             i0.ApplicationInitStatus]), i0.ɵmpd(2048, i0.ApplicationRef, null, [i0.ɵe]), i0.ɵmpd(512, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]),
-        i0.ɵmpd(512, i5.BrowserModule, i5.BrowserModule, [[3, i5.BrowserModule]]), i0.ɵmpd(512, i1.AppModule, i1.AppModule, [])]);
+        i0.ɵmpd(512, i6.BrowserModule, i6.BrowserModule, [[3, i6.BrowserModule]]), i0.ɵmpd(512, i7.ɵba, i7.ɵba, []), i0.ɵmpd(512, i7.FormsModule, i7.FormsModule, []), i0.ɵmpd(512, i9.AtGridModule, i9.AtGridModule, []),
+        i0.ɵmpd(1024, i8.ɵa, i8.ɵd, [[3, i8.Router]]), i0.ɵmpd(512, i8.UrlSerializer, i8.DefaultUrlSerializer, []), i0.ɵmpd(512, i8.ChildrenOutletContexts, i8.ChildrenOutletContexts, []), i0.ɵmpd(256, i8.ROUTER_CONFIGURATION, {}, []),
+        i0.ɵmpd(1024, i5.LocationStrategy, i8.ɵc, [i5.PlatformLocation, [2, i5.APP_BASE_HREF],
+            i8.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i5.Location, i5.Location, [i5.LocationStrategy]),
+        i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i0.SystemJsNgModuleLoader, [i0.Compiler, [2, i0.SystemJsNgModuleLoaderConfig]]),
+        i0.ɵmpd(1024, i8.ROUTES, function () {
+            return [[{ path: '', redirectTo: 'test', pathMatch: 'full' }, { path: 'test', component: i10.TestComponent }]];
+        }, []), i0.ɵmpd(1024, i8.Router, i8.ɵe, [i0.ApplicationRef, i8.UrlSerializer,
+            i8.ChildrenOutletContexts, i5.Location, i0.Injector, i0.NgModuleFactoryLoader,
+            i0.Compiler, i8.ROUTES, i8.ROUTER_CONFIGURATION, [2, i8.UrlHandlingStrategy],
+            [2, i8.RouteReuseStrategy]]), i0.ɵmpd(512, i8.RouterModule, i8.RouterModule, [[2, i8.ɵa], [2, i8.Router]]), i0.ɵmpd(512, i1.AppModule, i1.AppModule, [])]);
 });
 //# sourceMappingURL=app.module.ngfactory.js.map
