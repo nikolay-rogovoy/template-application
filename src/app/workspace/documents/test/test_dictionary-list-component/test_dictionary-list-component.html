@@ -17,6 +17,14 @@
 
                     <div><br></div>
                 </div>
+                <!--
+                <at-grid
+                  [data] = "positions"
+                  [metaData] = ""
+                  [staticMode] = "true"
+                  [currentPage] = "0"
+                ></at-grid>
+                -->
                 <div class="fresh-datatables">
                     <table [id]="tableName" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                         <thead>
@@ -29,7 +37,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let position of positionsTyped" [id]="getRowId(position)" style="cursor: pointer;" (click)="selectRow(position)">
+                        <tr *ngFor="let position of positions" [id]="getRowId(position)" style="cursor: pointer;" (click)="selectRow(position)">
                             <td>{{position.name}}</td>
                               <td>{{position.comment}}</td>
                               <td>

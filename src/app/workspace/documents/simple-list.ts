@@ -4,7 +4,6 @@ import {ServiceProviderList} from './service-provider-list';
 import {Router} from '@angular/router';
 import {Factory} from './factory';
 import {IEntity} from './i-entity';
-import * as manager from '../../../init/initDataTable2';
 export class SimpleListComponent extends ListComponent implements OnInit {
 
   /**Имя таблицы в DOM*/
@@ -34,8 +33,6 @@ export class SimpleListComponent extends ListComponent implements OnInit {
     if (this.debug) {
       console.log('SimpleListComponent -> loadGrid -> this.tableName = ' + this.tableName);
     }
-
-    manager.initDataTable2(this.tableName);
   }
 
   /**Загрузить данные*/
@@ -43,8 +40,6 @@ export class SimpleListComponent extends ListComponent implements OnInit {
     // Сбрасываем флаги для перерисовки грида
     this.loadComplete = false;
     this.firstViewChecked = true;
-
-    manager.destroyDataTable2(this.tableName);
 
     this.service.getEntityList(this.factory).subscribe(
       positions => {
@@ -64,8 +59,7 @@ export class SimpleListComponent extends ListComponent implements OnInit {
   /**Удалить запись*/
   delete(entity: IEntity) {
     super.delete(entity, (id: number) => {
-      manager.deleteRowById2(this.tableName,
-        this.getRowId(entity));
+      // Колбэк для удаления
     });
   }
 

@@ -6,7 +6,7 @@ import {ServiceProvider} from './service-provider';
 import {Router} from '@angular/router';
 import {Factory} from './factory';
 import {CommonLib} from './common-lib';
-import * as managerSweetAlert from '../../../init/sweetalert2';
+import {ColumnInfo} from 'at-grid';
 /**Компонент списков*/
 export class ListComponent extends CommonComponent implements OnInit {
 
@@ -82,51 +82,72 @@ export class ListComponent extends CommonComponent implements OnInit {
 
   /**Удалить запись*/
   delete(entity: IEntity, funcDelete: any) {
-    managerSweetAlert.swal(
-      {
-        title: 'Вы уверены?',
-        text: 'Удаление запись.',
-        type: 'warning',
-        showCancelButton: true,
-        confirmButtonClass: 'btn btn-info btn-fill',
-        confirmButtonText: 'Да, удалить!',
-        cancelButtonText: 'Отменить',
-        cancelButtonClass: 'btn btn-danger btn-fill',
-        closeOnConfirm: true,
-      },
-      () => {
-        if (entity[entity.keyName] == null) {
+    // TODO Поставить нормальные мессаги
+    /*
+     managerSweetAlert.swal(
+     {
+     title: 'Вы уверены?',
+     text: 'Удаление запись.',
+     type: 'warning',
+     showCancelButton: true,
+     confirmButtonClass: 'btn btn-info btn-fill',
+     confirmButtonText: 'Да, удалить!',
+     cancelButtonText: 'Отменить',
+     cancelButtonClass: 'btn btn-danger btn-fill',
+     closeOnConfirm: true,
+     },
+     () => {
+     if (entity[entity.keyName] == null) {
+     // Удалить в интерфейсе
+     funcDelete(entity[entity.keyName]);
+     } else {
+     // Удалить на сервере
+     this.service.deleteEntity(entity).subscribe(
+     (response: any) => {
+     // Удалить в интерфейсе
+     funcDelete(entity[entity.keyName]);
+     },
+     (error: any) => {
+     this.positions = [];
+     console.log('Ошибка удаления!');
+     console.log(error);
+
+     managerSweetAlert.swal(
+     {
+     title: 'Ошибка удаления!',
+     text: '',
+     type: 'error',
+     confirmButtonClass: 'btn btn-info btn-fill',
+     confirmButtonText: 'Ок',
+     closeOnConfirm: true
+     },
+     () => {
+     }
+     );
+     }
+     );
+     }
+     }
+     );
+     */
+
+    // TODO Удалить после постаовки мессаг нормальных
+    if (entity[entity.keyName] == null) {
+      // Удалить в интерфейсе
+      funcDelete(entity[entity.keyName]);
+    } else {
+      // Удалить на сервере
+      this.service.deleteEntity(entity).subscribe(
+        (response: any) => {
           // Удалить в интерфейсе
           funcDelete(entity[entity.keyName]);
-        } else {
-          // Удалить на сервере
-          this.service.deleteEntity(entity).subscribe(
-            (response: any) => {
-              // Удалить в интерфейсе
-              funcDelete(entity[entity.keyName]);
-            },
-            (error: any) => {
-              this.positions = [];
-              console.log('Ошибка удаления!');
-              console.log(error);
-
-              managerSweetAlert.swal(
-                {
-                  title: 'Ошибка удаления!',
-                  text: '',
-                  type: 'error',
-                  confirmButtonClass: 'btn btn-info btn-fill',
-                  confirmButtonText: 'Ок',
-                  closeOnConfirm: true
-                },
-                () => {
-                }
-              );
-            }
-          );
-        }
-      }
-    );
+        },
+        (error: any) => {
+          this.positions = [];
+          console.log('Ошибка удаления!');
+          console.log(error);
+        });
+    }
   }
 
   /**ИД строки в DOM*/
@@ -151,6 +172,11 @@ export class ListComponent extends CommonComponent implements OnInit {
     }
     // Активируем главный вид
     this.setActiveMasterView();
+  }
+
+  /**Заголовки колонок*/
+  getGridMetaData(): ColumnInfo[] {
+    return [];
   }
 
 }

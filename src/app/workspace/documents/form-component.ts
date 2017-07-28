@@ -9,7 +9,6 @@ import {IEntity} from './i-entity';
 import {Observable} from 'rxjs/Observable';
 import {Entity} from './entity';
 import {ActionFactory} from './action-factory';
-import * as managerSweetAlert from '../../../init/sweetalert2';
 /**Компонент - форма*/
 export class FormComponent
   extends CommonComponent implements OnInit {
@@ -31,12 +30,12 @@ export class FormComponent
 
   /**Изменения данных в компоненте*/
   changed: boolean = false;
+
   /**Конструктор*/
   constructor(public service: ServiceProvider,
               public route: ActivatedRoute,
               public location: Location,
-              public factory: Factory
-  ) {
+              public factory: Factory) {
     super();
     this.entity = this.factory.createEmpty();
   }
@@ -125,6 +124,8 @@ export class FormComponent
 
             this.resetForm(this.entity);
 
+            // TODO Поставить нормальные мессаги
+            /*
             managerSweetAlert.swal(
               {
                 title: 'Сохранение успешно выполнено!',
@@ -141,7 +142,9 @@ export class FormComponent
                 }
               }
             );
+            */
           } else {
+            /*
             managerSweetAlert.swal(
               {
                 title: 'Ошибка сохранения!',
@@ -154,10 +157,12 @@ export class FormComponent
               () => {
               }
             );
+            */
           }
         },
         (error: any) => {
-          managerSweetAlert.swal(
+          /*
+            managerSweetAlert.swal(
             {
               title: 'Ошибка сохранения!',
               text: '',
@@ -169,6 +174,7 @@ export class FormComponent
             () => {
             }
           );
+            */
         }
       );
     }
@@ -201,30 +207,39 @@ export class FormComponent
 
   /**Отменить сохранение*/
   cancelChange(): void {
-    if (this.getChanged()) {
-      managerSweetAlert.swal(
-        {
-          title: 'Вы уверены?',
-          text: 'Есть не сохраненные данные.',
-          type: 'warning',
-          showCancelButton: true,
-          confirmButtonClass: 'btn btn-info btn-fill',
-          confirmButtonText: 'Да, закрыть!',
-          cancelButtonText: 'Отменить',
-          cancelButtonClass: 'btn btn-danger btn-fill',
-          closeOnConfirm: true,
-        },
-        () => {
-          this.genCancel();
-          if (this.childMode === 0) {
-            this.location.back();
-          }
-        });
-    } else {
-      this.genCancel();
-      if (this.childMode === 0) {
-        this.location.back();
-      }
+    // TODO Поставить нормальные мессаги
+    /*
+     if (this.getChanged()) {
+     managerSweetAlert.swal(
+     {
+     title: 'Вы уверены?',
+     text: 'Есть не сохраненные данные.',
+     type: 'warning',
+     showCancelButton: true,
+     confirmButtonClass: 'btn btn-info btn-fill',
+     confirmButtonText: 'Да, закрыть!',
+     cancelButtonText: 'Отменить',
+     cancelButtonClass: 'btn btn-danger btn-fill',
+     closeOnConfirm: true,
+     },
+     () => {
+     this.genCancel();
+     if (this.childMode === 0) {
+     this.location.back();
+     }
+     });
+     } else {
+     this.genCancel();
+     if (this.childMode === 0) {
+     this.location.back();
+     }
+     }
+     */
+
+    // TODO Убрать
+    this.genCancel();
+    if (this.childMode === 0) {
+      this.location.back();
     }
   }
 

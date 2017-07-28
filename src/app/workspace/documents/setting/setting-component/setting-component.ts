@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import {CommonComponent} from "../../CommonLib";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {CommonComponent} from '../../common-component';
 
 @Component({
     moduleId: module.id,
@@ -8,16 +8,18 @@ import {CommonComponent} from "../../CommonLib";
     templateUrl: 'setting-component.html'
 })
 
-export class SettingComponent extends CommonComponent implements OnInit{
+export class SettingComponent extends CommonComponent implements OnInit {
 
-    constructor(router: Router) {
-        super();
-        this.router = router;
-    }
+  /**Роутер*/
+  router: Router;
 
-    router: Router;
+  /**Конструктор*/
+  constructor(router: Router) {
+    super();
+    this.router = router;
+  }
 
-    ngOnInit() {
-    }
-    
+  /**Инит компонента*/
+  ngOnInit() {
+  }
 }

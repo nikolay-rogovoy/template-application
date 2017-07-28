@@ -1,18 +1,19 @@
 
-import { FormComponent, iAction } from '../../CommonLib';
-import { Test_Doc } from "../entity/test_doc";
+import {FormComponent} from '../../form-component';
+import {IAction} from '../../i-action';
+import {TestDictionary} from '../entity/test_dictionary';
 
 /**Действие*/
-export class TestAction implements iAction{
+export class TestAction implements IAction {
 
     /**Конструктор*/
-    constructor(){
+    constructor() {
     }
 
     /**Выполнить*/
-    perform(form: FormComponent): void{
-        console.log("TestAction -> perform");
-        let someEntity: Test_Doc = form.entity as Test_Doc;
+    perform(form: FormComponent): void {
+        console.log('TestAction -> perform');
+        let someEntity: TestDictionary = form.entity as TestDictionary;
         console.log(someEntity);
     }
 }
