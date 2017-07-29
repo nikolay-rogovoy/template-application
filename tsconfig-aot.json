@@ -6,6 +6,8 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "declaration": false,
+    "outDir": "tmp/aot-js",
     "lib": ["es2015", "dom"],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
@@ -20,7 +22,7 @@
   ],
 
   "angularCompilerOptions": {
-    "genDir": "aot",
+    "genDir": "tmp/aot",
     "skipMetadataEmit" : true
   }
 }

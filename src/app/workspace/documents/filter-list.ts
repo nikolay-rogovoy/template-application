@@ -6,7 +6,6 @@ import {ServiceProviderListGroup} from './service-provider-list-group';
 import {FactoryGroup} from './factory-group';
 import {IGroupEntity} from './i-group-entity';
 import {IEntity} from './i-entity';
-import * as manager from '../../../init/initDataTable2';
 import * as lib from '../../../init/lib';
 
 export class FilterListComponent extends ListComponent {
@@ -57,7 +56,8 @@ export class FilterListComponent extends ListComponent {
     this.firstViewChecked = true;
 
     for (let groupEntity of this.entityGroups) {
-      manager.destroyDataTable2(this.getTableName(groupEntity));
+      // TODO Переход на новый грид
+      // manager.destroyDataTable2(this.getTableName(groupEntity));
     }
 
     this.serviceGroup.getEntityGroupList(this.factoryGroup).subscribe(
@@ -137,8 +137,8 @@ export class FilterListComponent extends ListComponent {
     if (this.debug) {
       console.log('FilterListComponent -> loadGrid -> this.tableName = ' + tableName);
     }
-
-    manager.initDataTable2(tableName);
+    // TODO Переход на новый грид
+    //manager.initDataTable2(tableName);
   }
 
   /**Свернуть - развернуть панель*/
@@ -189,8 +189,8 @@ export class FilterListComponent extends ListComponent {
   delete(entity: IEntity) {
     super.delete(entity, (id: number) => {
       for (let groupEntity of this.entityGroups) {
-        manager.deleteRowById2(this.getTableName(groupEntity),
-          this.getRowId(entity));
+        // TODO Переход на новый грид
+        // manager.deleteRowById2(this.getTableName(groupEntity), this.getRowId(entity));
       }
     });
   }

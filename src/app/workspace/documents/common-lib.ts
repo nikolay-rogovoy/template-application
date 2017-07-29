@@ -1,5 +1,6 @@
 import {Response, Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
+import {ErrorObservable} from 'rxjs/observable/ErrorObservable';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -105,7 +106,7 @@ export  class CommonLib {
   }
 
   /**Обработка ошибки извлечения данных*/
-  static handleError(error: Response | any) {
+  static handleError(error: Response | any): ErrorObservable {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;
     if (error instanceof Response) {
