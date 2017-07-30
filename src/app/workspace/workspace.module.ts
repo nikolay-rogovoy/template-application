@@ -13,7 +13,7 @@ import {ServiceProviderListGroup} from './documents/service-provider-list-group'
 import {HttpModule, JsonpModule} from '@angular/http';
 import {FormsModule}   from '@angular/forms';
 
-import {MODULE_ROUTES, MODULE_COMPONENTS} from './workspace.routes';
+import {MODULE_ROUTES, MODULE_COMPONENTS, MODULE_EXPORTS} from './workspace.routes';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import {MODULE_ROUTES, MODULE_COMPONENTS} from './workspace.routes';
     ServiceProviderFilter,
     ServiceProviderListGroup
   ],
-  declarations: [ MODULE_COMPONENTS ]
+  declarations: [ MODULE_COMPONENTS ],
+  exports: [MODULE_EXPORTS]
 })
 
 export class WorkspaceModule {

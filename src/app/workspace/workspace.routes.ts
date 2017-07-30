@@ -1,11 +1,12 @@
-import { Route } from '@angular/router';
-import { HomeComponent } from './dashboard/home.component';
+import {Route} from '@angular/router';
+import {WorkspaceComponent} from './workspace.component';
+import {HomeComponent} from './dashboard/home.component';
 
 
-import { SettingComponent } from './documents/setting/setting-component/setting-component';
+import {SettingComponent} from './documents/setting/setting-component/setting-component';
 
-import { TestDictionaryListComponent } from './documents/test/test_dictionary-list-component/test_dictionary-list-component';
-import { TestDictionaryEditComponent } from './documents/test/test_dictionary-edit-component/test_dictionary-edit-component';
+import {TestDictionaryListComponent} from './documents/test/test_dictionary-list-component/test_dictionary-list-component';
+import {TestDictionaryEditComponent} from './documents/test/test_dictionary-edit-component/test_dictionary-edit-component';
 
 export const MODULE_ROUTES: Route[] = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -19,6 +20,7 @@ export const MODULE_ROUTES: Route[] = [
 ]
 
 export const MODULE_COMPONENTS = [
+  WorkspaceComponent,
   HomeComponent,
 
   SettingComponent,
@@ -26,4 +28,8 @@ export const MODULE_COMPONENTS = [
   TestDictionaryListComponent,
   TestDictionaryEditComponent
 
+]
+
+export const MODULE_EXPORTS = [
+  WorkspaceComponent
 ]
