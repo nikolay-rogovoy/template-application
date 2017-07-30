@@ -26,4 +26,8 @@ import {WorkspaceModule} from './workspace/workspace.module';
     ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor() {
+  }
+}

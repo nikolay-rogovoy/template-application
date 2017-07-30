@@ -6,12 +6,11 @@ import {ServiceProvider} from './documents/service-provider';
 import {ServiceProviderFilter} from './documents/service-provider-filter';
 import {ServiceProviderListGroup} from './documents/service-provider-list-group';
 // import { TextMaskModule } from 'angular2-text-mask';
-
-// import {AtGridModule} from 'at-grid';
-
-
+import {AtGridModule} from 'at-grid';
 import {HttpModule, JsonpModule} from '@angular/http';
 import {FormsModule}   from '@angular/forms';
+import {RestDictionary} from './documents/rest-dictionary';
+import {ActionFactory} from './documents/action-factory';
 
 import {MODULE_ROUTES, MODULE_COMPONENTS, MODULE_EXPORTS} from './workspace.routes';
 
@@ -20,7 +19,7 @@ import {MODULE_ROUTES, MODULE_COMPONENTS, MODULE_EXPORTS} from './workspace.rout
   imports: [
     BrowserModule, FormsModule,
     HttpModule, JsonpModule,
-    // AtGridModule,
+    AtGridModule,
     // TextMaskModule,
     RouterModule.forChild(MODULE_ROUTES)
   ],
@@ -30,10 +29,14 @@ import {MODULE_ROUTES, MODULE_COMPONENTS, MODULE_EXPORTS} from './workspace.rout
     ServiceProviderFilter,
     ServiceProviderListGroup
   ],
-  declarations: [ MODULE_COMPONENTS ],
+  declarations: [MODULE_COMPONENTS],
   exports: [MODULE_EXPORTS]
 })
 
 export class WorkspaceModule {
-
+  constructor() {
+    // Инициализация словаря маршрутов
+    RestDictionary.initDictionary();
+    ActionFactory.initDictionary();
+  }
 }
