@@ -125,24 +125,30 @@ export class FormComponent
             this.resetForm(this.entity);
 
             // TODO Поставить нормальные мессаги
-            /*
-            managerSweetAlert.swal(
-              {
-                title: 'Сохранение успешно выполнено!',
-                text: '',
-                type: 'info',
-                confirmButtonClass: 'btn btn-info btn-fill',
-                confirmButtonText: 'Ок',
-                closeOnConfirm: true
-              },
-              () => {
-                this.genDataChanged();
-                if (this.childMode === 0) {
-                  this.location.back();
+            // Если нажали да (в мессаге)
+            this.genDataChanged();
+            if (this.childMode === 0) {
+              this.location.back();
+            }
+
+              /*
+              managerSweetAlert.swal(
+                {
+                  title: 'Сохранение успешно выполнено!',
+                  text: '',
+                  type: 'info',
+                  confirmButtonClass: 'btn btn-info btn-fill',
+                  confirmButtonText: 'Ок',
+                  closeOnConfirm: true
+                },
+                () => {
+                  this.genDataChanged();
+                  if (this.childMode === 0) {
+                    this.location.back();
+                  }
                 }
-              }
-            );
-            */
+              );
+              */
           } else {
             /*
             managerSweetAlert.swal(

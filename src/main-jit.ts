@@ -3,5 +3,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 
-enableProdMode();
+// Для JIT не ключаем продакшен режим
+// enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule);

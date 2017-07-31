@@ -20,18 +20,10 @@ export class SimpleListComponent extends ListComponent implements OnInit {
   ngAfterViewChecked(): void {
     // Данные загружены
     if (this.loadComplete) {
-      // Выполняем инициализацию грида только один раз
+      // Выполняем инициализацию только один раз
       if (this.firstViewChecked) {
         this.firstViewChecked = false;
-        this.loadGrid();
       }
-    }
-  }
-
-  /**Инициализация грида*/
-  loadGrid(): void {
-    if (this.debug) {
-      console.log('SimpleListComponent -> loadGrid -> this.tableName = ' + this.tableName);
     }
   }
 

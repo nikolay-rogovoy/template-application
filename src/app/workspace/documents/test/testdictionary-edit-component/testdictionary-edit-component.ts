@@ -5,23 +5,23 @@ import {FormComponent} from '../../form-component';
 import {IEntity} from '../../i-entity';
 import {ServiceProvider} from '../../service-provider';
 
-import {TestDictionary, TestDictionaryFactory} from '../entity/test_dictionary';
+import {Testdictionary, TestdictionaryFactory} from '../entity/testdictionary';
 import {Location} from '@angular/common';
 
 // usage:
 @Component({
     moduleId: module.id,
-    selector: 'test_dictionary-edit-component',
-    templateUrl: 'test_dictionary-edit-component.html'
+    selector: 'testdictionary-edit-component',
+    templateUrl: 'testdictionary-edit-component.html'
 })
 
-export class TestDictionaryEditComponent extends FormComponent {
+export class TestdictionaryEditComponent extends FormComponent {
 
   /**Имя таблицы в DOM*/
-  tableName: string = 'test_dictionaryEditTable';
+  tableName: string = 'testdictionaryEditTable';
 
   /**Форма*/
-  @ViewChild('test_dictionaryEditForm')
+  @ViewChild('testdictionaryEditForm')
   form: NgForm;
 
   /**Отмена выбора (для модального режима)*/
@@ -45,17 +45,14 @@ export class TestDictionaryEditComponent extends FormComponent {
   onDataChanged = new EventEmitter<IEntity>();
 
   /**Проводим до нужного типа*/
-  entity: TestDictionary;
+  entity: Testdictionary;
 
   /**Конструктор*/
   constructor(route: ActivatedRoute,
               location: Location,
               service: ServiceProvider) {
-    super(service, route, location, new TestDictionaryFactory());
+    super(service, route, location, new TestdictionaryFactory());
   }
 
-  /**Загрузить данные*/
-  loadData(): void {
-    super.loadData();
-  }
+  
 }

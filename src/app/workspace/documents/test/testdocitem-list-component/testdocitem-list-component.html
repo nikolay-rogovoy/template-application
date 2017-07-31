@@ -1,0 +1,32 @@
+
+<div class="container-fluid" [ngClass]="{hidden: activeForm != 1}">
+    <div class="row">
+        <div class="card">
+            <div class="content">
+                <div class="toolbar">
+                    <button type="button" class="btn btn-fill btn-primary" (click)="createNew()">
+                        <span class="btn-label">
+                            <i class="fa fa-plus"></i>
+                        </span>
+                        Создать
+                    </button>
+                    <button type="button" class="btn btn-fill btn-primary"
+                            [ngClass]="{ hidden: childMode != 1 }"
+                            (click)="genCancel()">Отменить
+                    </button>
+
+                    <div><br></div>
+                </div>
+                <at-grid
+                  [data] = "positions"
+                  [metaData] = "gridMetaData"
+                  [staticMode] = "true"
+                  [currentPage] = "0"
+                  (onSelect) = "selectRow($event)"
+                ></at-grid>
+            </div><!-- end content-->
+        </div><!--  end card  -->
+    </div> <!-- end row -->
+</div>
+
+

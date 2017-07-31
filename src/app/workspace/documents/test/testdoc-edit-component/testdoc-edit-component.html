@@ -1,0 +1,481 @@
+
+<div class="container-fluid" [ngClass]="{hidden: activeForm != 1}">
+    <div class="row justify-content-md-center">
+        <div class="card">
+            <div class="content">
+
+                <form method="#11" action="#222" name="testdocEditForm" id="testdocEditForm" (ngSubmit)="onSubmit()" #testdocEditForm="ngForm">
+
+                    <ul role="tablist" class="nav nav-tabs">
+                        <li role="presentation" class="active">
+                            <a href="#testdoc_common" data-toggle="tab">testdoc {{getChanged() ? "* " : ""}} # {{entity.idtestdoc}}</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="testdoc_common" class="tab-pane active">
+                          <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Комментарий</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['comment']=null;testdoc_comment_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text"   required #testdoc_comment_control="ngModel" minlength="0" maxlength="512" class="form-control" name="comment" id="comment" placeholder="Комментарий" [(ngModel)]="entity.comment"/>
+                                <div *ngIf="testdoc_comment_control.errors && (testdoc_comment_control.dirty || testdoc_comment_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_comment_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdoc_comment_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdoc_comment_control.errors.maxlength">
+                                    Максимальный размер поля 512 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdoc_comment_control.errors && testdoc_comment_control.errors.pattern">
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Дата созд2</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['dccre2']=null;testdoc_dccre2_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="date"  #testdoc_dccre2_control="ngModel" class="form-control" name="dccre2" id="dccre2" placeholder="Дата созд2" [ngModel]="entity.dccre2 | date:'yyyy-MM-dd'" (ngModelChange)="entity.dccre2 = $event"/>
+                                <div *ngIf="testdoc_dccre2_control.errors && (testdoc_dccre2_control.dirty || testdoc_dccre2_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_dccre2_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Дата создания</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['dtcre']=null;testdoc_dtcre_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="date"  #testdoc_dtcre_control="ngModel" class="form-control" name="dtcre" id="dtcre" placeholder="Дата создания" [ngModel]="entity.dtcre | date:'yyyy-MM-dd'" (ngModelChange)="entity.dtcre = $event"/>
+                                <div *ngIf="testdoc_dtcre_control.errors && (testdoc_dtcre_control.dirty || testdoc_dtcre_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_dtcre_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Дата документа</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['dtdoc']=null;testdoc_dtdoc_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="date" required #testdoc_dtdoc_control="ngModel" class="form-control" name="dtdoc" id="dtdoc" placeholder="Дата документа" [ngModel]="entity.dtdoc | date:'yyyy-MM-dd'" (ngModelChange)="entity.dtdoc = $event"/>
+                                <div *ngIf="testdoc_dtdoc_control.errors && (testdoc_dtdoc_control.dirty || testdoc_dtdoc_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_dtdoc_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Дата2</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['dtdoc2']=null;testdoc_dtdoc2_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="date"  #testdoc_dtdoc2_control="ngModel" class="form-control" name="dtdoc2" id="dtdoc2" placeholder="Дата2" [ngModel]="entity.dtdoc2 | date:'yyyy-MM-dd'" (ngModelChange)="entity.dtdoc2 = $event"/>
+                                <div *ngIf="testdoc_dtdoc2_control.errors && (testdoc_dtdoc2_control.dirty || testdoc_dtdoc2_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_dtdoc2_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">email</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['email']=null;testdoc_email_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  #testdoc_email_control="ngModel" minlength="0" maxlength="128" class="form-control" name="email" id="email" placeholder="email" [(ngModel)]="entity.email"/>
+                                <div *ngIf="testdoc_email_control.errors && (testdoc_email_control.dirty || testdoc_email_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_email_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdoc_email_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdoc_email_control.errors.maxlength">
+                                    Максимальный размер поля 128 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdoc_email_control.errors && testdoc_email_control.errors.pattern">
+                                    Неправильный email
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">email req</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['email2']=null;testdoc_email2_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required #testdoc_email2_control="ngModel" minlength="0" maxlength="128" class="form-control" name="email2" id="email2" placeholder="email req" [(ngModel)]="entity.email2"/>
+                                <div *ngIf="testdoc_email2_control.errors && (testdoc_email2_control.dirty || testdoc_email2_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_email2_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdoc_email2_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdoc_email2_control.errors.maxlength">
+                                    Максимальный размер поля 128 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdoc_email2_control.errors && testdoc_email2_control.errors.pattern">
+                                    Неправильный email
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Наименование</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['name']=null;testdoc_name_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text"   required #testdoc_name_control="ngModel" minlength="0" maxlength="5" class="form-control" name="name" id="name" placeholder="Наименование" [(ngModel)]="entity.name"/>
+                                <div *ngIf="testdoc_name_control.errors && (testdoc_name_control.dirty || testdoc_name_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_name_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdoc_name_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdoc_name_control.errors.maxlength">
+                                    Максимальный размер поля 5 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdoc_name_control.errors && testdoc_name_control.errors.pattern">
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Номер</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['numpos']=null;testdoc_numpos_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="number"  #testdoc_numpos_control="ngModel" pattern="^[-+]?[0-9]*[0-9]$" class="form-control" name="numpos" id="numpos" placeholder="Номер" [(ngModel)]="entity.numpos"/>
+                                  <div class="md-errors-spacer" [hidden]="testdoc_numpos_control.valid || testdoc_numpos_control.untouched">
+                                      <div class="md-char-counter" *ngIf="testdoc_numpos_control.errors && testdoc_numpos_control.errors.required">
+                                          Необходимо заполнить!
+                                      </div>
+                                      <div class="md-char-counter" *ngIf="testdoc_numpos_control.errors && testdoc_numpos_control.errors.pattern">
+                                          Не правильное число!
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">нум 2 нот нулл</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['numpos2']=null;testdoc_numpos2_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="number" required #testdoc_numpos2_control="ngModel" pattern="^[-+]?[0-9]*[0-9]$" class="form-control" name="numpos2" id="numpos2" placeholder="нум 2 нот нулл" [(ngModel)]="entity.numpos2"/>
+                                  <div class="md-errors-spacer" [hidden]="testdoc_numpos2_control.valid || testdoc_numpos2_control.untouched">
+                                      <div class="md-char-counter" *ngIf="testdoc_numpos2_control.errors && testdoc_numpos2_control.errors.required">
+                                          Необходимо заполнить!
+                                      </div>
+                                      <div class="md-char-counter" *ngIf="testdoc_numpos2_control.errors && testdoc_numpos2_control.errors.pattern">
+                                          Не правильное число!
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Тел.</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['phone']=null;testdoc_phone_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text" [textMask]="{mask: getEntityMask, keepCharPositions: true}"   #testdoc_phone_control="ngModel" minlength="0" maxlength="32" class="form-control" name="phone" id="phone" placeholder="Тел." [(ngModel)]="entity.phone"/>
+                                <div *ngIf="testdoc_phone_control.errors && (testdoc_phone_control.dirty || testdoc_phone_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_phone_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdoc_phone_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdoc_phone_control.errors.maxlength">
+                                    Максимальный размер поля 32 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdoc_phone_control.errors && testdoc_phone_control.errors.pattern">
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Об. тел.</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['phone2']=null;testdoc_phone2_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text" [textMask]="{mask: getEntityMask, keepCharPositions: true}"  required #testdoc_phone2_control="ngModel" minlength="0" maxlength="32" class="form-control" name="phone2" id="phone2" placeholder="Об. тел." [(ngModel)]="entity.phone2"/>
+                                <div *ngIf="testdoc_phone2_control.errors && (testdoc_phone2_control.dirty || testdoc_phone2_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_phone2_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdoc_phone2_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdoc_phone2_control.errors.maxlength">
+                                    Максимальный размер поля 32 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdoc_phone2_control.errors && testdoc_phone2_control.errors.pattern">
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Цена</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['price']=null;testdoc_price_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="number"  #testdoc_price_control="ngModel" pattern="^[-+]?[0-9]*[.,]?[0-9]+(?:[eE][-+]?[0-9]+)?$" class="form-control" name="price" id="price" placeholder="Цена" [(ngModel)]="entity.price"/>
+                                  <div class="md-errors-spacer" [hidden]="testdoc_price_control.valid || testdoc_price_control.untouched">
+                                      <div class="md-char-counter" *ngIf="testdoc_price_control.errors && testdoc_price_control.errors.required">
+                                          Необходимо заполнить!
+                                      </div>
+                                      <div class="md-char-counter" *ngIf="testdoc_price_control.errors && testdoc_price_control.errors.pattern">
+                                          Не правильное число!
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Цена 2 нот нулл</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['price2']=null;testdoc_price2_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="number" required #testdoc_price2_control="ngModel" pattern="^[-+]?[0-9]*[.,]?[0-9]+(?:[eE][-+]?[0-9]+)?$" class="form-control" name="price2" id="price2" placeholder="Цена 2 нот нулл" [(ngModel)]="entity.price2"/>
+                                  <div class="md-errors-spacer" [hidden]="testdoc_price2_control.valid || testdoc_price2_control.untouched">
+                                      <div class="md-char-counter" *ngIf="testdoc_price2_control.errors && testdoc_price2_control.errors.required">
+                                          Необходимо заполнить!
+                                      </div>
+                                      <div class="md-char-counter" *ngIf="testdoc_price2_control.errors && testdoc_price2_control.errors.pattern">
+                                          Не правильное число!
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Справочник2</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['testdictionary2_name']=null;testdoc_testdictionary2_name_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input style="cursor: pointer;" (click)="setActiveForm(3)"  #testdoc_testdictionary2_name_control="ngModel" type="text" readonly class="form-control" name="testdictionary2_name" id="testdictionary2_name" placeholder="Справочник2" [(ngModel)]="entity.testdictionary2_name"/>
+                                <div *ngIf="testdoc_testdictionary2_name_control.errors && (testdoc_testdictionary2_name_control.dirty || testdoc_testdictionary2_name_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_testdictionary2_name_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Справочник</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['testdictionary_name']=null;testdoc_testdictionary_name_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input style="cursor: pointer;" (click)="setActiveForm(2)" required #testdoc_testdictionary_name_control="ngModel" type="text" readonly class="form-control" name="testdictionary_name" id="testdictionary_name" placeholder="Справочник" [(ngModel)]="entity.testdictionary_name"/>
+                                <div *ngIf="testdoc_testdictionary_name_control.errors && (testdoc_testdictionary_name_control.dirty || testdoc_testdictionary_name_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdoc_testdictionary_name_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-fill btn-primary">Сохранить</button>
+                    <button type="button" class="btn btn-fill btn-primary" (click)="cancelChange()">Отменить</button>
+
+
+                </form>
+            </div><!-- End content -->
+        </div><!-- End card -->
+    </div><!-- End row justify-content-md-center -->
+</div><!-- End container-fluid -->
+
+
+<div [ngClass]="{hidden: activeForm != 3}">
+    <testdictionary-list-component
+            [childMode] = "1"
+            (onSelect) = "setValueTestdictionary2_Name($event);"
+            (onCancel)="setActiveMasterView()"
+    ></testdictionary-list-component>
+</div>
+<div [ngClass]="{hidden: activeForm != 2}">
+    <testdictionary-list-component
+            [childMode] = "1"
+            (onSelect) = "setValueTestdictionary_Name($event);"
+            (onCancel)="setActiveMasterView()"
+    ></testdictionary-list-component>
+</div>

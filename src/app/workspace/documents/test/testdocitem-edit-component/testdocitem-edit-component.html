@@ -1,0 +1,127 @@
+
+<div class="container-fluid" [ngClass]="{hidden: activeForm != 1}">
+    <div class="row justify-content-md-center">
+        <div class="card">
+            <div class="content">
+
+                <form method="#11" action="#222" name="testdocitemEditForm" id="testdocitemEditForm" (ngSubmit)="onSubmit()" #testdocitemEditForm="ngForm">
+
+                    <ul role="tablist" class="nav nav-tabs">
+                        <li role="presentation" class="active">
+                            <a href="#testdocitem_common" data-toggle="tab">testdocitem {{getChanged() ? "* " : ""}} # {{entity.idtestdocitem}}</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="testdocitem_common" class="tab-pane active">
+                          <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">comment</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['comment']=null;testdocitem_comment_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text"    #testdocitem_comment_control="ngModel" minlength="0" maxlength="512" class="form-control" name="comment" id="comment" placeholder="comment" [(ngModel)]="entity.comment"/>
+                                <div *ngIf="testdocitem_comment_control.errors && (testdocitem_comment_control.dirty || testdocitem_comment_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdocitem_comment_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdocitem_comment_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdocitem_comment_control.errors.maxlength">
+                                    Максимальный размер поля 512 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdocitem_comment_control.errors && testdocitem_comment_control.errors.pattern">
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Наименование</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['name']=null;testdocitem_name_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input type="text"    #testdocitem_name_control="ngModel" minlength="0" maxlength="256" class="form-control" name="name" id="name" placeholder="Наименование" [(ngModel)]="entity.name"/>
+                                <div *ngIf="testdocitem_name_control.errors && (testdocitem_name_control.dirty || testdocitem_name_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdocitem_name_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                  <div [hidden]="!testdocitem_name_control.errors.minlength">
+                                    Минимальный размер поля 0 символов!
+                                  </div>
+                                  <div [hidden]="!testdocitem_name_control.errors.maxlength">
+                                    Максимальный размер поля 256 символов!
+                                  </div>
+                                  <div class="md-char-counter" *ngIf="testdocitem_name_control.errors && testdocitem_name_control.errors.pattern">
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                      <div class="row">
+                                          <div class="col-xs-7">
+                                              <h4 class="title">Супер справочник</h4>
+                                          </div>
+                                          <div class="col-xs-5" style="text-align:right">
+                                              <a (click)="entity['testdictionary_name']=null;testdocitem_testdictionary_name_control.control.markAsTouched();$event.stopPropagation();"
+                                               class="btn-default remove" style="cursor: pointer;"><i class="fa fa-minus-square" style="color: silver"></i></a>
+                                          </div>
+                                      </div>
+  
+                            <div class="form-group">
+                                <input style="cursor: pointer;" (click)="setActiveForm(2)"  #testdocitem_testdictionary_name_control="ngModel" type="text" readonly class="form-control" name="testdictionary_name" id="testdictionary_name" placeholder="Супер справочник" [(ngModel)]="entity.testdictionary_name"/>
+                                <div *ngIf="testdocitem_testdictionary_name_control.errors && (testdocitem_testdictionary_name_control.dirty || testdocitem_testdictionary_name_control.touched)" class="alert alert-danger">
+                                  <div [hidden]="!testdocitem_testdictionary_name_control.errors.required">
+                                    Необходимо заполнить!
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-fill btn-primary">Сохранить</button>
+                    <button type="button" class="btn btn-fill btn-primary" (click)="cancelChange()">Отменить</button>
+
+
+                </form>
+            </div><!-- End content -->
+        </div><!-- End card -->
+    </div><!-- End row justify-content-md-center -->
+</div><!-- End container-fluid -->
+
+
+<div [ngClass]="{hidden: activeForm != 2}">
+    <testdictionary-list-component
+            [childMode] = "1"
+            (onSelect) = "setValueTestdictionary_Name($event);"
+            (onCancel)="setActiveMasterView()"
+    ></testdictionary-list-component>
+</div>

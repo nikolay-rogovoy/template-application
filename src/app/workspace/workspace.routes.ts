@@ -5,8 +5,8 @@ import {HomeComponent} from './dashboard/home.component';
 
 import {SettingComponent} from './documents/setting/setting-component/setting-component';
 
-import {TestDictionaryListComponent} from './documents/test/test_dictionary-list-component/test_dictionary-list-component';
-import {TestDictionaryEditComponent} from './documents/test/test_dictionary-edit-component/test_dictionary-edit-component';
+import {TestdictionaryListComponent} from './documents/test/testdictionary-list-component/testdictionary-list-component';
+import {TestdictionaryEditComponent} from './documents/test/testdictionary-edit-component/testdictionary-edit-component';
 
 export const MODULE_ROUTES: Route[] = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -14,8 +14,9 @@ export const MODULE_ROUTES: Route[] = [
 
   { path: 'documents/settings', component: SettingComponent },
 
-  { path: 'documents/test_dictionary', component:  TestDictionaryListComponent },
-  { path: 'documents/test_dictionary/edit/:idtest_dictionary', component: TestDictionaryEditComponent }
+  { path: 'documents/testdictionary', component:  TestdictionaryListComponent },
+  { path: 'documents/testdictionary/edit/:idtestdictionary', component: TestdictionaryEditComponent },
+  { path: 'documents/testdictionary/new', component: TestdictionaryEditComponent },
 
 ]
 
@@ -25,8 +26,8 @@ export const MODULE_COMPONENTS = [
 
   SettingComponent,
 
-  TestDictionaryListComponent,
-  TestDictionaryEditComponent
+  TestdictionaryListComponent,
+  TestdictionaryEditComponent
 
 ]
 

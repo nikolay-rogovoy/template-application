@@ -1,6 +1,6 @@
 import {IActionConstructor} from './i-action-constructor';
 import {IAction} from './i-action';
-import {TestAction} from './test/action/test-action';
+// import {TestAction} from './test/action/test-action';
 import {FormComponent} from './form-component';
 
 /**Фабрика действий*/
@@ -16,7 +16,7 @@ export class ActionFactory {
     /**Заполнить справочник*/
     static initDictionary() {
         ActionFactory.dictionary = new Object;
-        ActionFactory.dictionary['TestAction'] = ActionFactory.createAction(TestAction);
+        // ActionFactory.dictionary['TestAction'] = ActionFactory.createAction(TestAction);
     }
 
     /**Выполнить действие*/

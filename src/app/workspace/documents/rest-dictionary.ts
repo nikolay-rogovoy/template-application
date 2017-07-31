@@ -176,9 +176,9 @@ export class RestDictionary {
     this.dictionary['task'] = CommonLib.getApiUrl() + 'task';
     this.dictionary['taskgroup'] = CommonLib.getApiUrl() + 'taskgroup';
     this.dictionary['tasktype'] = CommonLib.getApiUrl() + 'tasktype';
-    this.dictionary['test_dictionary'] = CommonLib.getApiUrl() + 'test_dictionary';
-    this.dictionary['test_doc'] = CommonLib.getApiUrl() + 'test_doc';
-    this.dictionary['test_docitem'] = CommonLib.getApiUrl() + 'test_docitem';
+    this.dictionary['testdictionary'] = CommonLib.getApiUrl() + 'testdictionary';
+    this.dictionary['testdoc'] = CommonLib.getApiUrl() + 'testdoc';
+    this.dictionary['testdocitem'] = CommonLib.getApiUrl() + 'testdocitem';
     this.dictionaryGroup['agreement'] = CommonLib.getApiUrl() + 'agreement/filter';
     this.dictionaryGroup['appeal'] = CommonLib.getApiUrl() + 'appeal/filter';
     this.dictionaryGroup['assembly'] = CommonLib.getApiUrl() + 'assembly/filter';

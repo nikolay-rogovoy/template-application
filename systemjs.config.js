@@ -26,6 +26,7 @@ var System;
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
       'angular2-text-mask': 'npm:angular2-text-mask/dist/angular2TextMask.js',
       'text-mask-core/dist/textMaskCore': 'npm:text-mask-core/dist/textMaskCore.js',
+      'at-grid': 'npm:at-grid/at-grid.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'

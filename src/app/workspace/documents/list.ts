@@ -18,7 +18,7 @@ export class ListComponent extends CommonComponent implements OnInit {
 
   /**Позиции*/
   @Input()
-  positions: IEntity[];
+  positions: IEntity[] = [];
 
   /**Выделене какой-то позиции*/
   @Output()
@@ -26,6 +26,9 @@ export class ListComponent extends CommonComponent implements OnInit {
 
   @ViewChild('')
   formComponent: FormComponent;
+
+  /**Заголовки колонок*/
+  gridMetaData: ColumnInfo[] = [];
 
   /**Конструктор*/
   constructor(public service: ServiceProvider,
@@ -173,10 +176,4 @@ export class ListComponent extends CommonComponent implements OnInit {
     // Активируем главный вид
     this.setActiveMasterView();
   }
-
-  /**Заголовки колонок*/
-  getGridMetaData(): ColumnInfo[] {
-    return [];
-  }
-
 }
